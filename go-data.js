@@ -385,6 +385,20 @@
               kind: "text",
               html: "<p><strong>枷吃</strong>：用虚罩的方法封住对方逃跑的路线，让对方的子像被网住一样逃不出去。</p><p><strong>闷吃</strong>：利用对方气紧的弱点，让对方连逃跑都没有足够的气。</p>",
             },
+            {
+              kind: "board",
+              stones: ["W:D4", "B:C4", "B:D3", "B:F4", "B:E5"],
+              next: "B",
+              markers: ["D5", "E4", "E5", "F4"],
+              note: "枷吃的特点是隔一路虚罩：黑棋用 E5、F4 看住白 D4 的两个逃点，不直接紧气，而是把白棋封在网里。",
+            },
+            {
+              kind: "board",
+              stones: ["B:C4", "B:D3", "B:E3", "B:F4", "B:E6", "B:F5", "W:D4", "W:E4"],
+              next: "B",
+              markers: ["D5", "E5"],
+              note: "黑棋下 D5 打吃，白两子只剩 E5 一口气；白棋若逃到 E5，四周仍被黑棋堵死。这就是“门吃/闷吃”。",
+            },
           ],
         },
         {
@@ -396,6 +410,23 @@
             {
               kind: "text",
               html: "<p><strong>扑</strong>：主动把一颗子送到对方虎口里，让对方提掉，从而让对方的气变得更紧。</p><p><strong>倒扑</strong>：对方提掉你的子之后，你马上反提回更多棋子。</p><p><strong>接不归</strong>：对方因为气太紧，接不回去，眼睁睁被吃。</p>",
+            },
+            {
+              kind: "sequence",
+              initial: { stones: ["W:C4", "W:D3", "W:D5", "B:E3", "B:E5", "B:F4"], next: "B" },
+              steps: [
+                { move: "B:D4", note: "黑 1 扑：故意送一子到 D4。" },
+                { move: "W:E4", note: "白 2 提掉黑 1。" },
+                { move: "B:D4", note: "黑 3 倒扑：马上回提白 E4。" },
+              ],
+              note: "黑棋先送一子，白棋提掉后气反而变紧，黑棋再反提回来。这就是“倒扑”。",
+            },
+            {
+              kind: "board",
+              stones: ["W:F4", "W:D4", "B:F3", "B:F5", "B:G4"],
+              next: "B",
+              markers: ["E4"],
+              note: "白 F4 只剩 E4 一口气，想接回 D4；黑棋先占 E4，白 F4 被提，接不回去。这就是“接不归”。",
             },
           ],
         },
