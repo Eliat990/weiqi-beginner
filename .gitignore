@@ -1,0 +1,5 @@
+*.pptx
+*.inspect.ndjson
+_ppt_preview/
+.DS_Store
+Thumbs.db

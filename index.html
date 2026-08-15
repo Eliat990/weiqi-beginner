@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>围棋学习指导</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-stone black"></span>
+      <span>围棋学习指导</span>
+    </div>
+    <div class="progress-summary" id="progressSummary">加载中…</div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar"></aside>
+    <main class="content" id="content"></main>
+  </div>
+
+  <div id="toast" class="toast" hidden></div>
+
+  <script src="go-data.js"></script>
+  <script src="go-engine.js"></script>
+  <script src="go-ai.js"></script>
+  <script src="go-app.js"></script>
+</body>
+</html>
